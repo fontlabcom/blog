@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Python - FontLab Blog</title>
+	<atom:link href="https://fontlabcom.github.io/blog//font-tech/python/feed/" rel="self" type="application/rss+xml" />
+	<link>https://fontlabcom.github.io/blog//</link>
+	<description>News from FontLab. For better fonts.</description>
+	<lastBuildDate>Wed, 25 Feb 2015 03:22:18 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8</generator>
+<site xmlns="com-wordpress:feed-additions:1">58147272</site>	<item>
+		<title>Basics of Python scripting in FontLab Studio 5</title>
+		<link>https://fontlabcom.github.io/blog//fontlab/fontlab-studio-5/python-scripting/</link>
+		
+		<dc:creator><![CDATA[Adam Twardoch]]></dc:creator>
+		<pubDate>Wed, 25 Feb 2015 02:42:14 +0000</pubDate>
+				<category><![CDATA[FontLab Studio 5]]></category>
+		<category><![CDATA[Python]]></category>
+		<category><![CDATA[FontLab Studio]]></category>
+		<guid isPermaLink="false">http://fontlabcom.github.io/blog//?p=1052</guid>
+
+					<description><![CDATA[<p>In this 70-minute tutorial screencast, Adam Twardoch, product manager at Fontlab Ltd., gives an introduction to using the Python scripting language with FontLab Studio 5, the professional font editor. Topics include: basics of Python, FontLab Studio scripting user interface elements, installing Python, RoboFab and FontLab Python macros, writing simple scripts that modify a font and speed up the type design process. The tutorial was recorded in February 2015.</p>
+<p><a rel="nofollow" href="https://fontlabcom.github.io/blog//fontlab/fontlab-studio-5/python-scripting/">Basics of Python scripting in FontLab Studio 5</a> by <a rel="nofollow" href="https://fontlabcom.github.io/blog//author/adamtwr39258/">Adam Twardoch</a> from <a rel="nofollow" href="https://fontlabcom.github.io/blog//">FontLab Blog</a>.</p>
+<hr style="border-top:black solid 1px" /><a href="https://fontlabcom.github.io/blog//fontlab/fontlab-studio-5/python-scripting/">Basics of Python scripting in FontLab Studio 5</a> was first posted on February 25, 2015 at 2:42 am.<br />]]></description>
+										<content:encoded><![CDATA[<h2>Video tutorial</h2>
+<p class="intro para"></p><div class="arve" data-mode="normal" data-provider="iframe" id="arve-iframe-httpswwwyoutubecomembedqcskryz1qko612029e34e69c139353626" style="max-width:900px;" itemscope itemtype="http://schema.org/VideoObject">
+<span class="arve-inner">
+<span class="arve-embed arve-embed--has-aspect-ratio arve-embed--16by9">
+<meta itemprop="embedURL" content="https://www.youtube.com/embed/QCSKRYZ1Qko">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="arve-iframe fitvidsignore" data-arve="arve-iframe-httpswwwyoutubecomembedqcskryz1qko612029e34e69c139353626" data-src-no-ap="https://www.youtube.com/embed/QCSKRYZ1Qko" frameborder="0" height="506.25" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups allow-popups-to-escape-sandbox" scrolling="no" src="https://www.youtube.com/embed/QCSKRYZ1Qko" width="900"></iframe>
+
+</span>
+
+</span>
+
+</div>
+<br>
+The 70-minute tutorial <strong><a href="http://youtu.be/QCSKRYZ1Qko" target="_blank">Basics of Python scripting in FontLab Studio 5</a></strong> has beed recorded in February 2015 by Adam Twardoch. The tutorial is primarily intended for users who have never written any Python code before, although some tips and tricks for more advanced users are given. Topics include: basics of Python, scripting-related user interface elements of FontLab Studio, installing Python, RoboFab and FontLab Python macros, writing simple scripts that modify a font and speed up the type design process. See below for additional resources. 
+<p class="para"><span id="more-1052"></span></p>
+<h2>Installing Python and pip</h2>
+<p class="para">FontLab Studio 5.1.x on Mac OS X and 5.2.x on Windows works with Python 2.7. In addition to Python, it’s best to also have <strong>pip</strong>, the Python package installer, which will simplify installing many additional handy Python-based tools.  </p>
+<h3>On Windows</h3>
+<p class="para">Regardless of whether you use the 32-bit or the 64-bit version of Windows, download <a href="https://www.python.org/ftp/python/2.7.9/python-2.7.9.msi" title="Python 2.7.9 for Windows x86 (32 bit version)" target="_blank">Python 2.7.9 for Windows x86 (32 bit version)</a> and install it. You can follow ShowMeDo’s <a href="http://showmedo.com/videotutorials/video?name=pythonOzsvaldPyNewbie2&amp;fromSeriesID=49" title="Running Python 2.5 on Windows XP" target="_blank">Running Python 2.5 on Windows XP</a> video for instructions (note, however, that the Python version you’ll be installing is 2.7, not 2.5). Python 2.7.9 for Windows already includes pip. </p>
+<h3>On Mac OS X</h3>
+<p class="para">On <strong>Mac OS X</strong>, Python 2.7.6 is already installed but you need to install pip yourself. To do that, download <a href="https://bootstrap.pypa.io/get-pip.py" title="get-pip.py" target="_blank">get-pip.py</a> to your Desktop, then open <strong>/Applications/Utilities/Terminal.app</strong> and type: </p>
+<p class="para"><code>cd Desktop<br>
+sudo python get-pip.py<br>
+</code><br>
+(Enter your Administrator password, press Enter, and the installation should be complete.)</p>
+<h3>Installing RoboFab, fontTools/TTX</h3>
+<p class="para">Thomas Phinney has written a step-by-step guide for installing two popular Python packages which are essential to Python scripting within FontLab Studio 5:<br>
+<a href="http://store.fontlab.com/index.php?option=com_fss&amp;view=faq&amp;tag=RoboFab&amp;Itemid=430" title="How do I install Python, RoboFab, TTX/FontTools and other add-ons so I can run scripts (or write my own) with FontLab Studio?" target="_blank">How do I install Python, RoboFab, TTX/FontTools and other add-ons so I can run scripts (or write my own) with FontLab Studio?</a></p>
+<h2>Resources for learning Python</h2>
+<p class="para">I recommend watching these video videos by ShowMeDo: </p>
+<ul>
+<li><a href="http://showmedo.com/videotutorials/video?name=990000&amp;fromSeriesID=98" title="First 5 Minutes with Python" target="_blank">First 5 Minutes with Python</a></li>
+<li><a href="http://showmedo.com/videotutorials/series?name=kmNu2xcp3" title="What Does Python Look Like?" target="_blank">What Does Python Look Like?</a> series</li>
+<li><a href="http://showmedo.com/videotutorials/series?name=pythonOzsvaldIntroToPyResourcesSeries" title="Resources for Python Newbies" target="_blank">Resources for Python Newbies</a> series</li>
+<li><a href="http://showmedo.com/videotutorials/series?name=AzsZ2afN2" title="Common Variables and Containers" target="_blank">Common Variables and Containers</a> series</li>
+<li><a href="http://showmedo.com/videotutorials/series?name=tIZs1K8h4" title="Loops and Iteration" target="_blank">Loops and Iteration</a> series</li>
+<li><a href="http://showmedo.com/videotutorials/series?name=o9MBQ758M" title="The Python standard library" target="_blank">The Python standard library</a> series</li>
+<li><a href="http://showmedo.com/videotutorials/series?name=4oReffvYq" title="Functions" target="_blank">Functions </a> series</li>
+<li><a href="http://showmedo.com/videotutorials/series?name=WrTGJWRn9" title="the 'if' statement" target="_blank">the ‘if’ statement</a> series</li>
+</ul>
+<h2>Python in FontLab Studio 5 Resources</h2>
+<p class="para">FontLab Studio 5 has a “Python API”, i.e. a set of modules, classes and objects which you can access and manipulate using Python. You need to run Python scripts (macros) within FontLab Studio in order to access the FontLab Python API. Please refer to the resources below for more information.</p>
+<ul>
+<li>Chapter 12, Macro Programming of the <a href="http://www.fontlab.com/font-editor/fontlab-studio/" title="FontLab Studio 5 User’s Manual" target="_blank">FontLab Studio 5 User’s Manual</a> (download the PDF)</li>
+<li><a href="http://e-font.de/flpydoc/" title="Unofficial FontLab API Reference" target="_blank">Unofficial FontLab API Reference</a></li>
+<li><a href="http://www.fontlab.com/python-scripting/" title="Python scripting" target="_blank">Python scripting</a> section of fontlab.com</li>
+<li><a href="http://forum.fontlab.com/index.php?board=36.0" title="Python scripting" target="_blank">Python scripting board</a> on the FontLab Forum</li>
+</ul>
+<h2>Useful FontLab Studio 5 macro packages</h2>
+<p class="para">Note: Some of those packages expect that you have Adobe FDK for OpenType and RoboFab (along with the other dependencies) installed. </p>
+<ul>
+<li><a href="http://remix-tools.com/freemix" title="FMX: Freemix Tools" target="_blank">FMX: Freemix Tools</a> by Tim Ahrens (free)</li>
+<li><a href="http://remix-tools.com/" title="RMX: Font Remix Tools" target="_blank">RMX: Font Remix Tools</a> by Tim Ahrens (free for non-commercial use)</li>
+<li><a href="https://github.com/davelab6/autopsy" title="Autopsy">Autopsy</a> by Yanone (free)</li>
+<li><a href="http://www.fontqa.com/" title="FontQA" target="_blank">FontQA</a> by FontFont (free)</li>
+<li><a href="https://github.com/adobe-type-tools/fontlab-scripts" title="FontLab Scripts" target="_blank">FontLab Scripts</a> by Adobe Type Department</li>
+<li><a href="https://github.com/benkiel/FontLab-Scripts" title="FontLab Scripts" target="_blank">FontLab Scripts</a> by Ben Kiel</li>
+<li><a href="https://github.com/impallari/Impallari-Fontlab-Macros" title="FontLab Scripts" target="_blank">FontLab Scripts</a> by Pablo Impallari</li>
+<li><a href="https://github.com/MrBrezina/FontLab-macros" title="FontLab Scripts" target="_blank">FontLab Scripts</a> by David Brezina</li>
+<li><a href="https://github.com/tphinney/font-tools" title="FontLab Scripts" target="_blank">FontLab Scripts</a> by Thomas Phinney</li>
+<li><a href="https://github.com/signalwerk/fontstep" title="FontStep" target="_blank">FontStep</a> by Stefan Huber</li>
+<li><a href="https://github.com/retypefoundry/BatchFontInfo" title="Batch Font Info" target="_blank">Batch Font Info</a> by Retype</li>
+</ul>
+<p><a rel="nofollow" href="https://fontlabcom.github.io/blog//fontlab/fontlab-studio-5/python-scripting/">Basics of Python scripting in FontLab Studio 5</a> by <a rel="nofollow" href="https://fontlabcom.github.io/blog//author/adamtwr39258/">Adam Twardoch</a> from <a rel="nofollow" href="https://fontlabcom.github.io/blog//">FontLab Blog</a>.</p>
+<hr style="border-top:black solid 1px" /><a href="https://fontlabcom.github.io/blog//fontlab/fontlab-studio-5/python-scripting/">Basics of Python scripting in FontLab Studio 5</a> was first posted on February 25, 2015 at 2:42 am.<br />]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1052</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 0/238 objects using redis
+Page Caching using redis 
+Lazy Loading (feed)
+Database Caching using redis
+
+Served from: blog.fontlab.com @ 2021-08-20 15:17:07 by W3 Total Cache
+-->
