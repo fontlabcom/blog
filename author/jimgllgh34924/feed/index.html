@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Jim Gallagher - FontLab Blog</title>
+	<atom:link href="https://fontlabcom.github.io/blog//author/jimgllgh34924/feed/" rel="self" type="application/rss+xml" />
+	<link>https://fontlabcom.github.io/blog//</link>
+	<description>News from FontLab. For better fonts.</description>
+	<lastBuildDate>Mon, 07 Oct 2013 06:05:10 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8</generator>
+<site xmlns="com-wordpress:feed-additions:1">58147272</site>	<item>
+		<title>Glyphtext and webinar apology</title>
+		<link>https://fontlabcom.github.io/blog//learn/webinars/glyphtext-and-webinar-apology/</link>
+		
+		<dc:creator><![CDATA[Jim Gallagher]]></dc:creator>
+		<pubDate>Thu, 03 Oct 2013 19:16:58 +0000</pubDate>
+				<category><![CDATA[Webinars]]></category>
+		<category><![CDATA[FontLab Studio]]></category>
+		<category><![CDATA[Fontographer]]></category>
+		<category><![CDATA[glyphtext]]></category>
+		<category><![CDATA[kerning]]></category>
+		<category><![CDATA[metrics]]></category>
+		<category><![CDATA[OpenType]]></category>
+		<category><![CDATA[spacing]]></category>
+		<category><![CDATA[TypeTool]]></category>
+		<category><![CDATA[webinar]]></category>
+		<guid isPermaLink="false">http://fontlabcom.github.io/blog//?p=439</guid>
+
+					<description><![CDATA[<p>After we published the recording of our first webinar, David Vereschagin contacted us with the following comment: Jimmy Gallagher commits a serious Fontlab error when attempting to demonstrate letterspacing and setting sidebearings in his “Beyond the Basics: Font Editing Tips and Techniques” webinar. (This starts at about the 50 minute mark in the recording.) He [&#8230;]</p>
+<p><a rel="nofollow" href="https://fontlabcom.github.io/blog//learn/webinars/glyphtext-and-webinar-apology/">Glyphtext and webinar apology</a> by <a rel="nofollow" href="https://fontlabcom.github.io/blog//author/jimgllgh34924/">Jim Gallagher</a> from <a rel="nofollow" href="https://fontlabcom.github.io/blog//">FontLab Blog</a>.</p>
+<hr style="border-top:black solid 1px" /><a href="https://fontlabcom.github.io/blog//learn/webinars/glyphtext-and-webinar-apology/">Glyphtext and webinar apology</a> was first posted on October 3, 2013 at 7:16 pm.<br />]]></description>
+										<content:encoded><![CDATA[<p class="intro para">After we published the recording of our first webinar, <a href="http://www.quadrat.com/">David Vereschagin</a> contacted us with the following comment:</p>
+<blockquote>
+<p class="para">Jimmy Gallagher commits a serious Fontlab error when attempting to demonstrate letterspacing and setting sidebearings in his “Beyond the Basics: Font Editing Tips and Techniques” webinar. (This starts at about the 50 minute mark in the recording.) He fails to remember that putting /H into the metrics window in Fontlab will not yield a display of a slash and an H, but simply an H itself. When he inputs H/H/H he thinks he is showing how his spacing system works, but is only showing a series of Hs. Worse, when trying to show the letterspacing of HOH he claims that the sidebearings on O are the source of the letterspacing problem, when it’s clearly the left sidebearing of the H that is off. Everyone who attended that webinar or purchased the recording is owed an apology and a correction.</p>
+</blockquote>
+<p class="para">Thanks! I certainly do apologize for the confusion. Using the slash glyph as a “spacer glyph” was possible in Fontographer 5.0 and earlier, but you won’t get away with that so easily in FontLab Studio or the newest Fontographer 5.2. Rushing to finish and trying to toggle between FontLab Studio and Fontographer tripped me up. Thanks so much for catching this — we can always use comments like this so that we can do better next time!</p>
+<p class="para">And here’s what happened in more detail…<span id="more-439"></span></p>
+<p class="para">In the Metrics Window of FontLab Studio, Fontographer 5.2 or TypeTool, you can enter a string of glyphs to preview and set the metrics/kerning for by typing into a small text box. If you enter <kbd>H/H/H</kbd> there, what you’ll effectively see is three consecutive <samp>H</samp> glyphs, with the slashes “eaten up”. This was not so in Fontographer 5.0 and earlier. What’s going on there?</p>
+<p class="para">Well, in that textbox, you’re not typing regular text. You’re typing what we call <strong class="noTypo">glyphtext</strong>, which is a way to enter a string of any glyphs regardless of whether they have Unicodes assigned or not. In glyphtext, you can enter glyphs in several different ways:</p>
+<ol>
+<li>You can type any encoded (Unicode) character directly, such as <kbd>&amp;</kbd> or <kbd>Ą</kbd> or <kbd>H</kbd>.</li>
+<li>You can type any Unicode codepoint as hexadecimal number if you escape (prefix) it with <kbd>\u</kbd>, e.g. <kbd>\u005E</kbd> or <kbd>\u0048</kbd>. This is effectively equivalent to the above, it’s just that some non-Western characters are difficult to type in directly if you don’t have the right keyboard layout installed on your system. So it’s a shortcut/alternate method.</li>
+<li>You can type any glyph name if you escape it with the slash, e.g. <kbd>/ampersand</kbd> or <kbd>/Aogonek</kbd> or <kbd>/H</kbd>. In particular, this convention allows you to enter unencoded glyphs such as <kbd>/h.smcp</kbd> or <kbd>/two.onum</kbd> for the OpenType alternate glyphs.</li>
+</ol>
+<p class="para">If you use method #2 or #3, and a normal (direct) character follows an escaped entry, you need to add a space. If another escaped entry follows, there is no space.</p>
+<p class="para">Which means that typing one thing gets you another, specifically:<br> <kbd>HH&amp;H</kbd>&nbsp;gets you <samp>HH&amp;H</samp><br> <kbd>HH/ampersand H</kbd> gets you <samp>HH&amp;H</samp><br> <kbd>/H H&amp;H</kbd> gets you <samp>HH&amp;H</samp><br> <kbd>/H/H/ampersand\u0048</kbd> gets you <samp>HH&amp;H</samp></p>
+<p class="para">So in glyphtext, the characters <kbd>/</kbd> and <kbd>\</kbd> are treated specially. Normally, they are used as escape characters, so in order to actually type these characters, you need to use <kbd>//</kbd> to get <samp>/</samp> and to use <kbd>\\</kbd> to get <samp>\</samp>. Of course you can use <kbd>/slash</kbd> instead of <samp>//</samp> as well.</p>
+<p class="para">In Fontographer, glyphtext is a new thing. Before FOG 5.2, many designers used the <samp>/</samp> (slash) glyph as a separator to visualize spacing. So if you typed <kbd>H/H/H</kbd>, you’d get <samp>H/H/H</samp>, or more specifically, the sequence of glyphs <samp>H slash H slash H</samp>.&nbsp;But in FOG 5.2, FLS and TypeTool, if we type <kbd>H/H/H</kbd>,&nbsp;then the slash won’t show up at all, because we’re not actually entering the slash glyph. We effectively enter three Hs: one using the direct character entry (<kbd>H</kbd>) and two using the escaped glyph name (<kbd>/H</kbd>). This is equivalent to the situation where, in order to type in three zeros, we could enter <kbd>000</kbd> or&nbsp;<kbd>0/zero/zero</kbd>.</p>
+<p class="para">To actually use the slash as a spacer glyph, we’d need to type in <kbd>H//H//H</kbd>, which results in the glyph series <samp>H slash H slash H</samp> appearing.</p>
+<p class="para">Please note that in FLS, glyphtext only works in the small text box where you enter the text. If you switch FLS Metrics Window to the Text Mode (1st icon out of four), and type directly in the big window, then you can only enter regular text, not glyphtext (i.e. without the escapement methods #2 and #3).</p>
+<p class="para">So we actually recommend to no longer use the slash as a spacer but to use <kbd>|</kbd> (Shift+\ on the keyboard). Then you don’t need to worry about the escapement. Some designers who use <samp>|</samp> as a spacer glyph sometimes draw a very very thin vertical rectangle (or in case of italic fonts, actually a thin rectangle that is slanted in the appropriate angle) and space the font using that.</p>
+<p class="para">So, once again, many thanks to David for catching that mistake!</p>
+<p class="para">Jimmy<br> FontLab Support</p>
+<p><a rel="nofollow" href="https://fontlabcom.github.io/blog//learn/webinars/glyphtext-and-webinar-apology/">Glyphtext and webinar apology</a> by <a rel="nofollow" href="https://fontlabcom.github.io/blog//author/jimgllgh34924/">Jim Gallagher</a> from <a rel="nofollow" href="https://fontlabcom.github.io/blog//">FontLab Blog</a>.</p>
+<hr style="border-top:black solid 1px" /><a href="https://fontlabcom.github.io/blog//learn/webinars/glyphtext-and-webinar-apology/">Glyphtext and webinar apology</a> was first posted on October 3, 2013 at 7:16 pm.<br />]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">439</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 0/239 objects using redis
+Page Caching using redis 
+Lazy Loading (feed)
+Database Caching using redis
+
+Served from: blog.fontlab.com @ 2021-08-20 15:14:48 by W3 Total Cache
+-->
