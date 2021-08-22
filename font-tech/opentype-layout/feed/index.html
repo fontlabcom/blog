@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>OpenType Layout - FontLab Blog</title>
+	<atom:link href="https://fontlabcom.github.io/blog//font-tech/opentype-layout/feed/" rel="self" type="application/rss+xml" />
+	<link>https://fontlabcom.github.io/blog//</link>
+	<description>News from FontLab. For better fonts.</description>
+	<lastBuildDate>Sun, 22 Sep 2013 14:11:32 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8</generator>
+<site xmlns="com-wordpress:feed-additions:1">58147272</site>	<item>
+		<title>OpenType Layout feature classification</title>
+		<link>https://fontlabcom.github.io/blog//font-tech/opentype-layout/opentype-layout-feature-classification/</link>
+		
+		<dc:creator><![CDATA[Adam Twardoch]]></dc:creator>
+		<pubDate>Sun, 22 Sep 2013 04:34:40 +0000</pubDate>
+				<category><![CDATA[OpenType Layout]]></category>
+		<category><![CDATA[Arabic]]></category>
+		<category><![CDATA[BASE]]></category>
+		<category><![CDATA[CJK]]></category>
+		<category><![CDATA[GPOS]]></category>
+		<category><![CDATA[GSUB]]></category>
+		<category><![CDATA[Indic]]></category>
+		<category><![CDATA[MATH]]></category>
+		<category><![CDATA[OpenType]]></category>
+		<category><![CDATA[OpenType Layout features]]></category>
+		<category><![CDATA[RTL]]></category>
+		<category><![CDATA[SFNT]]></category>
+		<category><![CDATA[URL]]></category>
+		<guid isPermaLink="false">http://fontlabcom.github.io/blog//?p=98</guid>
+
+					<description><![CDATA[<p>OpenType Layout features allow for orthographically correct display of complex scripts such as Arabic and Indic and provide a mechanism for the user to apply advanced typographic formatting to text. They are used in the SFNT GSUB and GPOS tables. This document contains a useful classification of OpenType Layout feature tags. It is based on [&#8230;]</p>
+<p><a rel="nofollow" href="https://fontlabcom.github.io/blog//font-tech/opentype-layout/opentype-layout-feature-classification/">OpenType Layout feature classification</a> by <a rel="nofollow" href="https://fontlabcom.github.io/blog//author/adamtwr39258/">Adam Twardoch</a> from <a rel="nofollow" href="https://fontlabcom.github.io/blog//">FontLab Blog</a>.</p>
+<hr style="border-top:black solid 1px" /><a href="https://fontlabcom.github.io/blog//font-tech/opentype-layout/opentype-layout-feature-classification/">OpenType Layout feature classification</a> was first posted on September 22, 2013 at 4:34 am.<br />]]></description>
+										<content:encoded><![CDATA[<p class="intro para">OpenType Layout features allow for orthographically correct display of complex scripts such as Arabic and Indic and provide a mechanism for the user to apply advanced typographic formatting to text. They are used in the SFNT <code>GSUB</code> and <code>GPOS</code> tables.</p>
+<p class="para">This document contains a useful classification of OpenType Layout feature tags. It is based on the OpenType spec version 1.6, with some additional entries about removed features and Microsoft-only Math features related to the <code>MATH</code> OpenType table.</p>
+<p class="para">This document is very technical in nature, and is primarily aimed at software developers who wish to implement user interfaces for applying OpenType Layout features in applications.&nbsp;<span id="more-98"></span></p>
+<div class="fl-superwide">
+<table id="tablepress-1" class="tablepress tablepress-id-1" aria-describedby="tablepress-1-description">
+<thead>
+<tr class="row-1 odd">
+	<th class="column-1">Tag</th><th class="column-2">Friendly name</th><th class="column-3">Spec</th><th class="column-4">Access</th><th class="column-5">Show in UI</th><th class="column-6">UI level</th><th class="column-7">Script</th><th class="column-8">Script-specific</th><th class="column-9">Default</th><th class="column-10">Group</th><th class="column-11">Subgroup</th><th class="column-12">Remarks</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#aalt"><code>aalt</code></a></td><td class="column-2">Access All Alternates</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">special</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">outside</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-3 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#abvf"><code>abvf</code></a></td><td class="column-2">Above-Base Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-4 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#abvm"><code>abvm</code></a></td><td class="column-2">Above-Base Mark Positioning</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">after</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-5 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#abvs"><code>abvs</code></a></td><td class="column-2">Above-Base Substitutions</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-6 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#afrc"><code>afrc</code></a></td><td class="column-2">Alternative Fractions</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-7 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#akhn"><code>akhn</code></a></td><td class="column-2">Akhands</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-8 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#altv"><code>altv</code></a></td><td class="column-2">Alternate Vertical Metrics</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-9 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#blwf"><code>blwf</code></a></td><td class="column-2">Below-Base Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-10 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#blwm"><code>blwm</code></a></td><td class="column-2">Below-Base Mark Positioning</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">after</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-11 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#blws"><code>blws</code></a></td><td class="column-2">Below-Base Substitutions</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-12 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#c2pc"><code>c2pc</code></a></td><td class="column-2">Petite Capitals From Capitals</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">letter case</td><td class="column-12"></td>
+</tr>
+<tr class="row-13 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#c2sc"><code>c2sc</code></a></td><td class="column-2">Small Capitals From Capitals</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">letter case</td><td class="column-12"></td>
+</tr>
+<tr class="row-14 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#calt"><code>calt</code></a></td><td class="column-2">Contextual Alternates</td><td class="column-3">OpenType</td><td class="column-4">opt-out</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL, (except) hani</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-15 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#case"><code>case</code></a></td><td class="column-2">Case-Sensitive Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">letter case</td><td class="column-12"></td>
+</tr>
+<tr class="row-16 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#ccmp"><code>ccmp</code></a></td><td class="column-2">Glyph Composition/Decomposition</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">ALL</td><td class="column-8">before</td><td class="column-9">always</td><td class="column-10">Language</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-17 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#cfar"><code>cfar</code></a></td><td class="column-2">Conjunct Form After Ro</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-18 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#cjct"><code>cjct</code></a></td><td class="column-2">Conjunct Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">ALL</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-19 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#clig"><code>clig</code></a></td><td class="column-2">Contextual Ligatures</td><td class="column-3">OpenType</td><td class="column-4">opt-out</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-20 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#cpsp"><code>cpsp</code></a></td><td class="column-2">Capital Spacing</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">letter case</td><td class="column-12"></td>
+</tr>
+<tr class="row-21 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#crcy"><code>crcy</code></a></td><td class="column-2">Currency</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-22 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#cswh"><code>cswh</code></a></td><td class="column-2">Contextual Swash</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-23 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#curs"><code>curs</code></a></td><td class="column-2">Cursive Positioning</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-24 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#cv01-cv99"><code>cv[01-99]</code></a></td><td class="column-2">Character Variant [01-99]</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">special</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-25 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#dflt"><code>dflt</code></a></td><td class="column-2">Default Processing</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-26 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#dist"><code>dist</code></a></td><td class="column-2">Distances</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">after</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-27 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#dlig"><code>dlig</code></a></td><td class="column-2">Discretionary Ligatures</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-28 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#dnom"><code>dnom</code></a></td><td class="column-2">Denominators</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-29 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#dpng"><code>dpng</code></a></td><td class="column-2">Diphthongs</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-30 even">
+	<td class="column-1"><code>dtls</code></td><td class="column-2">Dotless Forms</td><td class="column-3">Math</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">math</td><td class="column-7">math</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-31 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ae.htm#expt"><code>expt</code></a></td><td class="column-2">Expert Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">maybe</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-32 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#falt"><code>falt</code></a></td><td class="column-2">Final Glyph Alternates</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">paragraph, document</td><td class="column-7">CURSIVE, syrc</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-33 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#fin2"><code>fin2</code></a></td><td class="column-2">Terminal Forms #2</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">syrc</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-34 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#fin3"><code>fin3</code></a></td><td class="column-2">Terminal Forms #3</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">syrc</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-35 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#fina"><code>fina</code></a></td><td class="column-2">Terminal Forms</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">none | word, paragraph*</td><td class="column-7">ARABIC, syrc | ALL</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12">UI only where not required by shaping</td>
+</tr>
+<tr class="row-36 even">
+	<td class="column-1"><code>flac</code></td><td class="column-2">Flattened Accents over Capitals</td><td class="column-3">Math</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">math</td><td class="column-7">math</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-37 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#frac"><code>frac</code></a></td><td class="column-2">Fractions</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-38 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#fwid"><code>fwid</code></a></td><td class="column-2">Full Width</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-39 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#half"><code>half</code></a></td><td class="column-2">Half Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-40 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#haln"><code>haln</code></a></td><td class="column-2">Halant Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-41 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#halt"><code>halt</code></a></td><td class="column-2">Alternate Half Width</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">paragraph, document</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-42 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#hist"><code>hist</code></a></td><td class="column-2">Historical Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-43 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#hkna"><code>hkna</code></a></td><td class="column-2">Horizontal Kana Alternates</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">orientation</td><td class="column-7">kana</td><td class="column-8">after</td><td class="column-9">orientation</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-44 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#hlig"><code>hlig</code></a></td><td class="column-2">Historical Ligatures</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-45 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#hngl"><code>hngl</code></a></td><td class="column-2">Hangul</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">hang, hani</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-46 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#hojo"><code>hojo</code></a></td><td class="column-2">Hojo Kanji Forms (JIS x 212-1990 Kanji Forms)</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-47 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#hwid"><code>hwid</code></a></td><td class="column-2">Half Width</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-48 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#init"><code>init</code></a></td><td class="column-2">Initial Forms</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">none | word, paragraph*</td><td class="column-7">ARABIC, syrc | ALL</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12">UI only where not required by shaping</td>
+</tr>
+<tr class="row-49 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#isol"><code>isol</code></a></td><td class="column-2">Isolated Forms</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">none | word, paragraph*</td><td class="column-7">ARABIC, syrc | ALL</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12">UI only where not required by shaping</td>
+</tr>
+<tr class="row-50 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#ital"><code>ital</code></a></td><td class="column-2">Italics</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">latn, cyrl, grek</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-51 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#jajp"><code>jajp</code></a></td><td class="column-2">Japanese Forms</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-52 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#jalt"><code>jalt</code></a></td><td class="column-2">Justification Alternatives</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">paragraph, document</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-53 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#jp03"><code>jp03</code></a></td><td class="column-2">JIS03 Forms</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-54 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#jp04"><code>jp04</code></a></td><td class="column-2">JIS2004 Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-55 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#jp78"><code>jp78</code></a></td><td class="column-2">JIS78 Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-56 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#jp83"><code>jp83</code></a></td><td class="column-2">JIS83 Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-57 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_fj.htm#jp90"><code>jp90</code></a></td><td class="column-2">JIS90 Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-58 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#kern"><code>kern</code></a></td><td class="column-2">Kerning</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">document</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-59 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#kokr"><code>kokr</code></a></td><td class="column-2">Korean Forms</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-60 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#lfbd"><code>lfbd</code></a></td><td class="column-2">Left Bounds</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">document</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-61 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#liga"><code>liga</code></a></td><td class="column-2">Standard Ligatures</td><td class="column-3">OpenType</td><td class="column-4">opt-out</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-62 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#ljmo"><code>ljmo</code></a></td><td class="column-2">Leading Jamo Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">hang, jamo</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-63 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#lnum"><code>lnum</code></a></td><td class="column-2">Lining Figures</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-64 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#locl"><code>locl</code></a></td><td class="column-2">Localized Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">special</td><td class="column-6">language selection</td><td class="column-7">ALL</td><td class="column-8">before</td><td class="column-9">always</td><td class="column-10">Language</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-65 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#ltra"><code>ltra</code></a></td><td class="column-2">Left-to-right alternates</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">RTL</td><td class="column-8">before</td><td class="column-9">bidi</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-66 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#ltrm"><code>ltrm</code></a></td><td class="column-2">Left-to-right mirrored forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">RTL</td><td class="column-8">before</td><td class="column-9">bidi</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-67 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#mark"><code>mark</code></a></td><td class="column-2">Mark Positioning</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Language</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-68 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#med2"><code>med2</code></a></td><td class="column-2">Medial Forms #2</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">syrc</td><td class="column-8">during</td><td class="column-9">always</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-69 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#medi"><code>medi</code></a></td><td class="column-2">Medial Forms</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">none | word, paragraph*</td><td class="column-7">ARABIC, syrc | ALL</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12">UI only where not required by shaping</td>
+</tr>
+<tr class="row-70 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#mgrk"><code>mgrk</code></a></td><td class="column-2">Mathematical Greek</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">grek</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-71 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#mkmk"><code>mkmk</code></a></td><td class="column-2">Mark to Mark Positioning</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Language</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-72 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#mset"><code>mset</code></a></td><td class="column-2">Mark Positioning via Substitution</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Language</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-73 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#nalt"><code>nalt</code></a></td><td class="column-2">Alternate Annotation Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">hani, kana, latn, cyrl, grek</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-74 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#nlck"><code>nlck</code></a></td><td class="column-2">NLC Kanji Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-75 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#nukt"><code>nukt</code></a></td><td class="column-2">Nukta Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-76 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#numr"><code>numr</code></a></td><td class="column-2">Numerators</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-77 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#onum"><code>onum</code></a></td><td class="column-2">Old Style Figures</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-78 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#opbd"><code>opbd</code></a></td><td class="column-2">Optical Bounds</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">special</td><td class="column-6">document</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-79 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#ordn"><code>ordn</code></a></td><td class="column-2">Ordinals</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-80 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_ko.htm#ornm"><code>ornm</code></a></td><td class="column-2">Ornaments</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-81 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#palt"><code>palt</code></a></td><td class="column-2">Proportional Alternate Width</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana, latn, cyrl, grek</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-82 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#pcap"><code>pcap</code></a></td><td class="column-2">Petite Capitals</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">letter case</td><td class="column-12"></td>
+</tr>
+<tr class="row-83 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#pkna"><code>pkna</code></a></td><td class="column-2">Proportional Kana</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-84 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#pnum"><code>pnum</code></a></td><td class="column-2">Proportional Figures</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-85 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#pref"><code>pref</code></a></td><td class="column-2">Pre-base Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-86 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#pres"><code>pres</code></a></td><td class="column-2">Pre-base Substitutions</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-87 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#pstf"><code>pstf</code></a></td><td class="column-2">Post-base Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-88 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#psts"><code>psts</code></a></td><td class="column-2">Post-base Substitutions</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC, khmr</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-89 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#pwid"><code>pwid</code></a></td><td class="column-2">Proportional Widths</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana, latn, cyrl, grek</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-90 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#qwid"><code>qwid</code></a></td><td class="column-2">Quarter Widths</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-91 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#rand"><code>rand</code></a></td><td class="column-2">Randomize</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-92 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#rclt"><code>rclt</code></a></td><td class="column-2">Required Contextual Forms</td><td class="column-3">Proposed</td><td class="column-4">opt-out</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">ALL</td><td class="column-8">after?</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12">Proposed in Aug 2012</td>
+</tr>
+<tr class="row-93 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#rkrf"><code>rkrf</code></a></td><td class="column-2">Rakar Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-94 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#rlig"><code>rlig</code></a></td><td class="column-2">Required Ligatures</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">ALL</td><td class="column-8">during</td><td class="column-9">always</td><td class="column-10">Language</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-95 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#rphf"><code>rphf</code></a></td><td class="column-2">Reph Form</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-96 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#rtbd"><code>rtbd</code></a></td><td class="column-2">Right Bounds</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">document</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-97 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#rtla"><code>rtla</code></a></td><td class="column-2">Right-To-Left Alternates</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">RTL</td><td class="column-8">before</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-98 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#ruby"><code>ruby</code></a></td><td class="column-2">Ruby Notation Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-99 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#salt"><code>salt</code></a></td><td class="column-2">Stylistic Alternates</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-100 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#sinf"><code>sinf</code></a></td><td class="column-2">Scientific Inferiors</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-101 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#size"><code>size</code></a></td><td class="column-2">Optical Size</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">special</td><td class="column-6">document</td><td class="column-7">ALL</td><td class="column-8">before</td><td class="column-9">always</td><td class="column-10">Typography</td><td class="column-11">basic support</td><td class="column-12"></td>
+</tr>
+<tr class="row-102 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#smcp"><code>smcp</code></a></td><td class="column-2">Small Capitals</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">letter case</td><td class="column-12"></td>
+</tr>
+<tr class="row-103 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#smpl"><code>smpl</code></a></td><td class="column-2">Simplified Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">document</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-104 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#ssxx"><code>ss[01-20]</code></a></td><td class="column-2">Stylistic Set [01-20]</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-105 odd">
+	<td class="column-1"><code>ssty</code></td><td class="column-2">Script Style</td><td class="column-3">Math</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">math</td><td class="column-7">math</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-106 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#subs"><code>subs</code></a></td><td class="column-2">Subscript</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-107 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#sups"><code>sups</code></a></td><td class="column-2">Superscript</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-108 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#swsh"><code>swsh</code></a></td><td class="column-2">Swash</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">character, word</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-109 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#titl"><code>titl</code></a></td><td class="column-2">Titling</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">variants</td><td class="column-12"></td>
+</tr>
+<tr class="row-110 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#tjmo"><code>tjmo</code></a></td><td class="column-2">Trailing Jamo Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">hang, jamo</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-111 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#tnam"><code>tnam</code></a></td><td class="column-2">Traditional Name Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">document</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-112 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#tnum"><code>tnum</code></a></td><td class="column-2">Tabular Figures</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-113 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#trad"><code>trad</code></a></td><td class="column-2">Traditional Forms</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">document</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-114 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_pt.htm#twid"><code>twid</code></a></td><td class="column-2">Third Widths</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-115 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#unic"><code>unic</code></a></td><td class="column-2">Unicase</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">letter case</td><td class="column-12"></td>
+</tr>
+<tr class="row-116 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#valt"><code>valt</code></a></td><td class="column-2">Alternate Vertical Metrics</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">orientation</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">orientation</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-117 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vatu"><code>vatu</code></a></td><td class="column-2">Vattu Variants</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">INDIC</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">complex scripts</td><td class="column-12"></td>
+</tr>
+<tr class="row-118 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vert"><code>vert</code></a></td><td class="column-2">Vertical Writing</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">orientation</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">orientation</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-119 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vhal"><code>vhal</code></a></td><td class="column-2">Alternate Vertical Half Metrics</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-120 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vivn"><code>vivn</code></a></td><td class="column-2">Vietnamese Forms</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-121 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vjmo"><code>vjmo</code></a></td><td class="column-2">Vowel Jamo Forms</td><td class="column-3">OpenType</td><td class="column-4">mandatory</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">hang, jamo</td><td class="column-8">during</td><td class="column-9">shaping</td><td class="column-10">Language</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-122 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vkna"><code>vkna</code></a></td><td class="column-2">Vertical Kana Alternates</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">orientation</td><td class="column-7">kana</td><td class="column-8">after</td><td class="column-9">orientation</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-123 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vkrn"><code>vkrn</code></a></td><td class="column-2">Vertical Kerning</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">orientation</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">orientation</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-124 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vpal"><code>vpal</code></a></td><td class="column-2">Proportional Alternate Vertical Metrics</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-125 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#vrt2"><code>vrt2</code></a></td><td class="column-2">Vertical Rotation</td><td class="column-3">OpenType</td><td class="column-4">special</td><td class="column-5">special</td><td class="column-6">orientation</td><td class="column-7">hani, kana</td><td class="column-8">after</td><td class="column-9">orientation</td><td class="column-10">Typography</td><td class="column-11">Asian CJK</td><td class="column-12"></td>
+</tr>
+<tr class="row-126 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#zero"><code>zero</code></a></td><td class="column-2">Slashed Zero</td><td class="column-3">OpenType</td><td class="column-4">opt-in</td><td class="column-5">yes</td><td class="column-6">word, paragraph</td><td class="column-7">ALL</td><td class="column-8">after</td><td class="column-9">never</td><td class="column-10">Typography</td><td class="column-11">numerals and scientific</td><td class="column-12"></td>
+</tr>
+<tr class="row-127 odd">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#zhcn"><code>zhcn</code></a></td><td class="column-2">Simplified Chinese Forms</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+<tr class="row-128 even">
+	<td class="column-1"><a target="_blank" href="https://www.microsoft.com/typography/otspec/features_uz.htm#zntw"><code>zntw</code></a></td><td class="column-2">Traditional Chinese Forms</td><td class="column-3">Removed</td><td class="column-4">never</td><td class="column-5">no</td><td class="column-6">none</td><td class="column-7">NONE</td><td class="column-8">none</td><td class="column-9">never</td><td class="column-10">Removed</td><td class="column-11">none</td><td class="column-12"></td>
+</tr>
+</tbody>
+</table>
+<span id="tablepress-1-description" class="tablepress-table-description tablepress-table-description-id-1"><a data-lightbox="width:100%;" href="#tablepress-1_wrapper"><i class="uk-icon-zoom-in"></i> Standalone view</a> </span>
+<!-- #tablepress-1 from cache --></div>
+<p class="para">Notational convention: Underlined text means verbatim entries, “,” in the Values entry means that multiple values are permitted, “|” in the Values entry means that values are mutualy exclusive.</p>
+<h2>Description of table columns</h2>
+<h3>Spec</h3>
+<p class="para">Values: OpenType | Math | Removed</p>
+<h3>Tag</h3>
+<p class="para">Values: 4‑letter OpenType feature tag name</p>
+<p class="para">Notes: the features which contain numbers are represented as ranges. The entry cv[01–99] means a range of tags: cv01, cv02, cv03, …, cv99. The entry ss[01–20] means a range of tags: ss01, ss02, ss03, …, ss20.</p>
+<h3>Friendly name</h3>
+<p class="para">Values: Official feature name as registered in the specification</p>
+<h3>Show in UI</h3>
+<p class="para">Values: no | yes | special</p>
+<p class="para">Determines whether a certain feature should be somehow exposed in an application’s UI. “no” means that no UI is necessary, “yes” generally means that a UI element should be exposed that is directly related to the feature, “special” indicates a special treatment for the UI, e.g. associating the feature activity with some general-level application or document preferences (e.g. optical bounds or CJK orientation).</p>
+<h3>UI level</h3>
+<p class="para">Values: none, character, word, paragraph, document</p>
+<p class="para">Indicates at what level the UI should be implemented: none, character, word, paragraph, document. Some features are sensibly applied to just one character or a few, while others can be applied to long runs of text.</p>
+<h3>Script</h3>
+<p class="para">Values: ALL, INDIC, RTL, ARABIC, CURSIVE, NONE or 4‑letter OpenType script tags</p>
+<p class="para">Indicates a generalization of which features are used with which scripts. This is not 100% accurate, I think it’d be a good idea to produce an exhaustive mapping of all registered features and mapping them to all registered script tags. Currently, the OT spec has some unclear wording e.g. “Indic scripts similar to Devanagari”. So the column sometimes uses script tags and sometimes generic terms like “ALL”, “INDIC”, “ARABIC”, “RTL”, “CURSIVE”.</p>
+<p class="para">Future work: I think that it would be useful to categorize the OpenType script tag list into such groups (so there is an exhaustive mapping of which script tags are classified as “European”, “Indic”, “Arabetic”, “CJK” etc., plus which writing direction they may have (three columns: LTR, RTL, vert).</p>
+<h3>Script-specific shaping</h3>
+<p class="para">Values: none | before | during | after | outside</p>
+<p class="para">Classification of when, in relation to script-specific shaping, a feature is being applied: before the script-specific shaping (I was able to come up with only four definitive entries for it: ccmp, locl, rtla and size), during the script-specific shaping, or after the script-specific shaping.</p>
+<p class="para">Unfortunately, Adobe follows a different paradigm of describing their features than Microsoft. I think Adobe’s CJK layout principles would be better off if described in form of a shaping specification like Microsoft’s, rather than spreading it around the feature description list. Therefore, I have classified all of Adobe’s CJK features as “to be applied after shaping”, since “shaping” is not defined in this context — though I think it could.</p>
+<h3>Applied by default</h3>
+<p class="para">Values: never | shaping | always | maybe | orientation</p>
+<p class="para">Indicates whether the feature should be always on by default, never on by default, or whether shaping (or in CJK case, orientation) determines if the feature is applied.</p>
+<h3>Functional category</h3>
+<p class="para">Values: Language | Typography | Removed<br>
+Loose way of classifying the OpenType Layout features into some categories. There is a major distinction between “language” and “typography” (there is such distinction in the script-specific specs already).</p>
+<h3>Functional subcategory</h3>
+<p class="para">Values: Asian CJK | complex scripts | basic support | numerals and scientific | letter case | variants<br>
+Additional functional sub-categorization, useful for grouping features in UIs.</p>
+<h3>Notes</h3>
+<p class="para">Loose comments on particular entries.</p>
+<p><a rel="nofollow" href="https://fontlabcom.github.io/blog//font-tech/opentype-layout/opentype-layout-feature-classification/">OpenType Layout feature classification</a> by <a rel="nofollow" href="https://fontlabcom.github.io/blog//author/adamtwr39258/">Adam Twardoch</a> from <a rel="nofollow" href="https://fontlabcom.github.io/blog//">FontLab Blog</a>.</p>
+<hr style="border-top:black solid 1px" /><a href="https://fontlabcom.github.io/blog//font-tech/opentype-layout/opentype-layout-feature-classification/">OpenType Layout feature classification</a> was first posted on September 22, 2013 at 4:34 am.<br />]]></content:encoded>
+					
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">98</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 0/259 objects using redis
+Page Caching using redis 
+Lazy Loading (feed)
+Database Caching using redis
+
+Served from: blog.fontlab.com @ 2021-08-20 15:16:49 by W3 Total Cache
+-->
